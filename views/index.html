@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/public/js/client/skel.min.js"></script>
+    <script src="/public/js/client/skel-panels.min.js"></script> 
+    <script src="/public/js/client/init.js"></script>
+    <link rel="stylesheet" href="/public/css/style.css" />
+</head>
+
+<body class="homepage">
+    <!-- Header -->
+    <div id="header">
+        <div class="container">
+
+            <!-- Logo -->
+            <div id="logo">
+                <h1><a href="#">HAENDAYSO</a></h1>
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul id="navbar">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li id="loginnav"><a href="/user/login">Login</a></li>
+                    <li id="registernav"><a href="/user/register">Register</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+    <!-- Header -->
+
+    <!-- Main -->
+    <div id="main">
+        <div class="container">
+            <div id="booktickets">
+                <div id="bookfield">
+
+                    <label>Select Theatre:</label>
+                    <select name='theatres' id='theatres'>
+                        <option value="selecttheatre">Select Theatre</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="hidden" id="hidden" />
+                    <label>Select Movie : </label>
+                    <select name='movies' id='m'>
+                        <option value="selectmovie">Select Movie</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Select Date : </label>
+                    <select id="date">
+                        <option value="selectdate">Select Date</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Select Time : </label>
+                    <select id="time">
+                        <option value="selecttime">Select Time</option>
+                    </select>
+                </div>
+                <button id="book">Book Now</button>
+            </div><br>
+            <!--Search-->
+            <div id="searchform">
+                <label>Search</label>
+                <input type="text" name="search" id="search">
+            </div><br>
+            <!--Search-->
+
+            <div class="row">
+                <div id="movies"></div>
+            </div>
+        </div>
+        <!-- Main -->
+        <br>
+    </div>
+
+    <script src='/public/js/client/jquery-3.3.1.min.js'></script>
+    <script src="/public/js/client/index.js"></script>
+    <script src="/public/js/client/booktickets.js"></script>
+    <script src="/public/js/client/adminChecker.js"></script>
+</body>
+
+</html>

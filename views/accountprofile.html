@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/public/js/client/skel.min.js"></script>
+    <script src="/public/js/client/skel-panels.min.js"></script>
+    <script src="/public/js/client/init.js"></script>
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <style>
+        h2 {
+            font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        td {
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header">
+        <div class="container">
+
+            <!-- Logo -->
+            <div id="logo">
+                <h1><a href="#">HAENDAYSO</a></h1>
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul id="navbar">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li id="loginnav"><a href="/user/login">Login</a></li>
+                    <li id="registernav"><a href="/user/register">Register</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+    <!-- Header -->
+
+    <div id="detailmain">
+        <div class="container">
+            <h2>Account Profile</h2>
+            <input type="hidden" id="userid">
+            <div class="errordiv"><div class="errorspan"></div></div>
+            <p>Only Full Name and Mobile Number are allowed to be edited</p>
+            <table>
+                <tr>
+                    <td><label>Full Name: </label></td>
+                    <td><input type="text" id="fullname" name="fullname"></td>
+                </tr>
+
+                <tr>
+                    <td><label>Username: </label></td>
+                    <td><input type="text" id="username" name="username" readonly><span id="usernameerror" class="error">Username must be between 8 - 12 characters</span></td>
+                </tr>
+
+                <tr>
+                    <td><label>Email: </label></td>
+                    <td><input type="email" id="email" name="email" readonly><span id="emailerror" class="error">Must be a valid email.</span></td>
+                </tr>
+
+                <tr>
+                    <td><label>Mobile Number: </label></td>
+                    <td><input type="text" id="mobile" name="mobile"><span id="mobilerror" class="error">Mobile number should start with '8' or '9' and only consists of 8 numbers.</span></td>
+                </tr>
+
+                <tr>
+                    <td><label>D.O.B: </label></td>
+                    <td><input type="date" id="dob" name="dob" readonly></td>
+                </tr>
+
+                <tr>
+                    <td><label>Points Earned</label></td>
+                    <td><input type="number" id="points" name="points" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Edit Profile" id="edit"></td>
+                </tr>
+            </table>
+
+            
+        </div>
+    </div>
+    <script src='/public/js/client/jquery-3.3.1.min.js'></script>
+    <script src="/public/js/client/validation.js"></script>
+    <script src="/public/js/client/userdetails.js"></script>
+    <script src="/public/js/client/booktickets.js"></script>
+    <script src="/public/js/client/adminChecker.js"></script>
+</body>
+
+</html>

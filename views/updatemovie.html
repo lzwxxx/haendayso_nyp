@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update Movie</title>
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <style>
+        textarea {
+            width: 50%;
+            height: 180px;
+        }
+        .genre {
+            column-count: 2;
+            width: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="detailmain">
+    <h1>Update Movie</h1>
+    <form id="updatemovie" method="post" action="/admin/updatemovie" enctype="multipart/form-data">
+        <div class="container">
+            <div class='preview'>
+               
+            </div>
+            <div>
+                <input type="file" id="file" name="file" />
+            </div><br>
+
+        </div>
+        <label>Title</label>
+        <input type="text" name="title" id="title" /><br><br>
+        <label>Overview</label><br>
+        <textarea rows="10" cols="30" name="overview" id="overview"></textarea><br><br>
+        <label>Release Date</label>
+        <input type="date" name="releasedate" id="releasedate" /><br><br>
+        <label>Runtime</label>
+        <input type="number" name="runtime" id="runtime" /><br><br>
+
+        <input type="hidden" id="id" name="id" />
+        <input type="hidden" id="popularity" name="popularity" />
+        <input type="hidden" id="vote_count" name="vote_count" />
+        <input type="hidden" id="original_language" name="original_language" />
+        <input type="hidden" id="vote_average" name="vote_average" />
+
+        <label>Genres</label><br>
+        <div class="genre"></div><br>
+        <button id="update">Update Movie</button>
+    </form>
+</div>
+    <script src='/public/js/client/jquery-3.3.1.min.js'></script>
+    <script src="/public/js/client/updatemovie.js"></script>
+</body>
+
+</html>

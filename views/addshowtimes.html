@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="bookfield">
+        <h2>Set Theatre and Hall</h2>
+        <label>Movie Title</label><div id="m"></div><br><br>
+        <input type="hidden" id="hiddenmovieid">
+        <label>Select Theatre:</label>
+        <select name='theatres' id='theatres'>
+            <option value="selecttheatre">Select Theatre</option>
+        </select>
+        <label>Select Hall:</label>
+        <select name='hall' id='hall'>
+            <option value="selecthall">Select Theatre</option>
+        </select>
+        <button id="Lockvenue"> Lock Venue </button>
+    </div><br><br>
+
+
+    <div id="showdate">
+        <hr>
+        <h2>Select the Date</h2>
+        <label>Select Date : </label>
+        <input id="date" type="date" name="date">
+        <button id="addDate">Lock Date</button>
+    </div><br><br>
+
+    
+
+    <div id="showthetimes">
+        <hr>
+        <h2>Select the Time</h2>
+        <label>Select Time : </label>
+        <input id="time" type="time"/>
+        <button id="addTime">Add Time to list</button>
+    </div><br><br>
+
+    <button id="readd">Add Another Set of Date and time</button><br><br>
+
+    <div id="dateandtimes"><br><br>
+        <div id="newdate"></div>
+        <ul id="newul"></ul>
+    </div>
+
+    <div>
+        <table id="addedShowtimes"></table>
+    </div>
+
+    <button id="sendshowtime">Book Now</button>
+</div><br>
+<script src='/public/js/client/jquery-3.3.1.min.js'></script>
+<script src="/public/js/client/addshowtimes.js"></script>
+</body>
+</html>

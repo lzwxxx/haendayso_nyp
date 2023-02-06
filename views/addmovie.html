@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Movie</title>
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <style>
+        .genre{
+            column-count: 2;
+            width: 800px;
+        }
+
+        textarea{
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="detailmain">
+    <h1>New Movie Details</h1>
+    <div class="container">
+        <form method="post" action="/admin/addmovie" enctype="multipart/form-data" id="myform">
+            <div class='preview'>
+                <img src="" id="img" width="10%" height="auto">
+            </div>
+            <div>
+                <input type="file" id="file" name="file" />
+            </div><br>
+
+            <label>Title: </label>
+            <input type="text" name="title" id="title" /><br><br>
+
+            <label>Original Language: </label>
+            <select id="original_language" name="original_language">
+                <option value="en">English</option>
+                <option value="ko">Korean</option>
+                <option value="id">Indonesian</option>
+            </select><br><br>
+
+            <label>Overview: </label><br>
+            <textarea rows="4" cols="50" name="overview" id="overview"></textarea><br><br>
+
+            <label>Genres: </label><br>
+            <div class="genre"></div><br>
+
+            <label>Release Date: </label>
+            <input type="date" name="releasedate" id="releasedate" /><br><br>
+
+            <label>Runtime: </label>
+            <input type="number" name="runtime" id="runtime" /><br><br>
+
+            <input type="submit" value="Add Movie">
+        </form>
+        </div>
+
+        <script src='/public/js/client/jquery-3.3.1.min.js'></script>
+        <script src="/public/js/client/addmovie.js"></script>
+
+</body>
+
+</html>

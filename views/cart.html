@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/style.css" />
+    <style>
+        #flex-container {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+        }
+
+        #cart {
+            border: 1px solid black;
+            margin-left: 15px;
+            padding: 20px;
+        }
+
+        .discount,
+        #reset {
+            border: none;
+            font-family: 'Oxygen', sans-serif;
+            line-height: 2em;
+            border-bottom: 1px solid #c9c9c9;
+            padding: 7px;
+            border-radius: 10px 0px 10px 0px;
+            width: 150px;
+            background-color: #f0f0f0;
+        }
+
+        input {
+            font-size: 10pt;
+        }
+
+        #cart {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="detailmain">
+        <p><a href="/">HOME</a>><a href="/booking/viewseats">SELECT SEATS</a>><a href="/booking/payment">PAYMENT</a></p>
+        <div id="flex-container">
+            <div id="selection">
+                <h1>Payment Method</h1>
+                <h3>Redeem Points For Discounts</h3>
+                <p>*Redeem points for a discount per transaction*</p>
+                <div id="statusmessage"></div>
+                <div id="container">
+                    <button class="discount" id="five" value="5">10 Points - $5 off</button>
+                    <button class="discount" id="ten" value="10">15 Points - $10 off</button>
+                    <button class="discount" id="twenty" value="20">20 Points - $20 off</button>
+                </div><br>
+
+                <input type="hidden" id="hiddenDiscount" />
+                <button id="reset">Reset Discount</button><br><br>
+                <input type="submit" name="submit" value="Change Seats" id="modify" />
+                <input type="submit" name="submit" id="submit" value="Book"
+                    onclick="return confirm('Do you want to proceed with the booking')" />
+                <input type="submit" name="submit" value="Cancel Order" id="cancel" />
+            </div>
+
+            <div id="cart">
+                <div id="details"></div>
+                <div id="amount"></div>
+            </div>
+
+            <input type="hidden" id="hidden" />
+        </div>
+    </div>
+    <script src="/public/js/client/jquery-3.3.1.min.js"></script>
+    <script src="/public/js/client/cart.js"></script>
+</body>
+
+</html>

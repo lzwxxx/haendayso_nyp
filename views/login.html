@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/public/js/client/skel.min.js"></script>
+    <script src="/public/js/client/skel-panels.min.js"></script>
+    <script src="/public/js/client/init.js"></script>
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <style>
+        button {
+		    border:none;
+		    font-family: 'Oxygen', sans-serif;
+		    font-size: 12pt;
+		    line-height: 2em;
+		    border-bottom:1px solid #c9c9c9;
+		    padding:7px;    
+		    border-radius: 10px 0px 10px 0px; 
+		    width:240px;
+		    background-color: #f0f0f0;
+	}
+    </style>
+</head>
+
+<body class="homepage">
+    <!-- Header -->
+    <div id="header">
+        <div class="container">
+
+            <!-- Logo -->
+            <div id="logo">
+                <h1><a href="#">HAENDAYSO</a></h1>
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li class="active"><a href="/">Homepage</a></li>
+                    <li><a href="/user/login">Login</a></li>
+                    <li><a href="/user/register">Register</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+    <!-- Header -->
+
+    <div id="main">
+        <div class="container">
+            <header>
+                <h2>Login</h2>
+            </header>
+            <div class="errordiv"><div class="errorspan"></div></div><br>
+                <input type="text" id="username" name="username" placeholder="Enter username" class="inputs"/><br><br>
+                <input type="password" id="password" name="password" placeholder="Enter password" class="inputs"/><br><br>
+                <button id="login">Login</button><br><br>
+                
+            <a href="/user/register">Create a new account?</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <div class="container">
+
+        </div>
+    </div>
+    <script src='/public/js/client/jquery-3.3.1.min.js'></script>
+    <script src="/public/js/client/validation.js"></script>
+    <script src="/public/js/client/login.js"></script>
+    <script src="/public/js/client/adminChecker.js"></script>
+    <!-- Footer -->
+</body>
+
+</html>
